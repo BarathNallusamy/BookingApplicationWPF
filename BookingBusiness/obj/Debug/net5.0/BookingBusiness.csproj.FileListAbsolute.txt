@@ -67,3 +67,5 @@ C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\ob
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\obj\Debug\net5.0\ref\BookingBusiness.dll
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\obj\Debug\net5.0\BookingBusiness.pdb
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\obj\Debug\net5.0\BookingBusiness.genruntimeconfig.cache
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingBusiness\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

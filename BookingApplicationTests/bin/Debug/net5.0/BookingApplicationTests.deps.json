@@ -10,23 +10,34 @@
         "dependencies": {
           "BookingBusiness": "1.0.0",
           "Booking_ApplicationSystem": "1.0.0",
-          "Microsoft.NET.Test.Sdk": "16.5.0",
-          "NUnit": "3.12.0",
-          "NUnit3TestAdapter": "3.16.1"
+          "Microsoft.EntityFrameworkCore": "5.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.4",
+          "Microsoft.NET.Test.Sdk": "16.9.1",
+          "NUnit": "3.13.1",
+          "NUnit3TestAdapter": "3.17.0"
         },
         "runtime": {
           "BookingApplicationTests.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/16.5.0": {
+      "Humanizer.Core/2.8.26": {
         "runtime": {
-          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "16.0.28223.3002"
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.26.1919"
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.CodeCoverage/16.9.1": {
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "16.900.21.11904"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/2.0.1": {
         "dependencies": {
           "Microsoft.Data.SqlClient.SNI.runtime": "2.0.1",
@@ -150,6 +161,19 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.4": {},
+      "Microsoft.EntityFrameworkCore.Design/5.0.4": {
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "5.0.4.0",
+            "fileVersion": "5.0.421.11803"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.4": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.4",
@@ -172,6 +196,11 @@
             "assemblyVersion": "5.0.4.0",
             "fileVersion": "5.0.421.11803"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.4"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -274,7 +303,7 @@
       },
       "Microsoft.Identity.Client/4.14.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
           "System.Private.Uri": "4.3.2",
@@ -349,17 +378,18 @@
           }
         }
       },
-      "Microsoft.NET.Test.Sdk/16.5.0": {
+      "Microsoft.NET.Test.Sdk/16.9.1": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "16.5.0",
-          "Microsoft.TestPlatform.TestHost": "16.5.0"
+          "Microsoft.CodeCoverage": "16.9.1",
+          "Microsoft.TestPlatform.TestHost": "16.9.1"
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.3": {},
-      "Microsoft.TestPlatform.ObjectModel/16.5.0": {
+      "Microsoft.TestPlatform.ObjectModel/16.9.1": {
         "dependencies": {
-          "NuGet.Frameworks": "5.0.0"
+          "NuGet.Frameworks": "5.0.0",
+          "System.Reflection.Metadata": "1.6.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.TestPlatform.CoreUtilities.dll": {
@@ -456,9 +486,9 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.5.0": {
+      "Microsoft.TestPlatform.TestHost/16.9.1": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.5.0",
+          "Microsoft.TestPlatform.ObjectModel": "16.9.1",
           "Newtonsoft.Json": "10.0.1"
         },
         "runtime": {
@@ -642,7 +672,7 @@
       },
       "Newtonsoft.Json/10.0.1": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.Collections": "4.3.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
@@ -684,18 +714,18 @@
           }
         }
       },
-      "NUnit/3.12.0": {
+      "NUnit/3.13.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/nunit.framework.dll": {
-            "assemblyVersion": "3.12.0.0",
-            "fileVersion": "3.12.0.0"
+            "assemblyVersion": "3.13.1.0",
+            "fileVersion": "3.13.1.0"
           }
         }
       },
-      "NUnit3TestAdapter/3.16.1": {
+      "NUnit3TestAdapter/3.17.0": {
         "dependencies": {
           "Microsoft.DotNet.InternalAbstractions": "1.0.0",
           "System.ComponentModel.EventBasedAsync": "4.3.0",
@@ -1109,6 +1139,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Reflection.Metadata/1.6.0": {},
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1460,7 +1491,9 @@
       },
       "BookingBusiness/1.0.0": {
         "dependencies": {
-          "Booking_ApplicationSystem": "1.0.0"
+          "Booking_ApplicationSystem": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4"
         },
         "runtime": {
           "BookingBusiness.dll": {}
@@ -1483,19 +1516,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CodeCoverage/16.5.0": {
+    "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PM5YLtyN45EyUGePJpaNogndlaQPrMgQQXHKMhMESC6KfSVvt+j7+dxBi8NYC6X6dZVysf7ngwhSW3wwvPJRSQ==",
-      "path": "microsoft.codecoverage/16.5.0",
-      "hashPath": "microsoft.codecoverage.16.5.0.nupkg.sha512"
+      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "path": "humanizer.core/2.8.26",
+      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.5.0": {
+    "Microsoft.CodeCoverage/16.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-OEIMvld3rabmyc1L4VvHWOMTEOYrGLbgoVxwAaD8RwX8GT3a1Aal7QpJXLV22f47LpMhSz0uOBerKAd8eI9wNA==",
+      "path": "microsoft.codecoverage/16.9.1",
+      "hashPath": "microsoft.codecoverage.16.9.1.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/2.0.1": {
       "type": "package",
@@ -1539,6 +1579,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/5.0.4",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.4.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/5.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LqyE5MX0IUFjsXu3tNIMpTtC4poY7XQogpGdATjK949tCKopxyJuzTZtgsgdc20LGFWQM0UwwyyfUNjs5kKvsw==",
+      "path": "microsoft.entityframeworkcore.design/5.0.4",
+      "hashPath": "microsoft.entityframeworkcore.design.5.0.4.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/5.0.4": {
       "type": "package",
       "serviceable": true,
@@ -1552,6 +1599,13 @@
       "sha512": "sha512-wFn6lYyezhTIWpEB85NYn0TmVs0GiTQBbgKxK4/BmeEXBoLdltOngosey1u9t1+c2xjxuis1V7fP3wcLVSf+jg==",
       "path": "microsoft.entityframeworkcore.sqlserver/5.0.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ldiZtmhBXJBvBHLUUglCL2n0RFoaXwR3fnvY0Tn0U70V4gafA2ny7vf1d/Gh4ai9qyj/wVJOj4RN8HAy4wjqTw==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.4",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "type": "package",
@@ -1658,12 +1712,12 @@
       "path": "microsoft.identitymodel.tokens/5.6.0",
       "hashPath": "microsoft.identitymodel.tokens.5.6.0.nupkg.sha512"
     },
-    "Microsoft.NET.Test.Sdk/16.5.0": {
+    "Microsoft.NET.Test.Sdk/16.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yHZOhVSPuGqgHi+KhHiAZqNY08avkQraXKvgKgDU8c/ztmGzw7gmukkv49EaTq6T3xmp4XroWk3gAlbJHMxl8w==",
-      "path": "microsoft.net.test.sdk/16.5.0",
-      "hashPath": "microsoft.net.test.sdk.16.5.0.nupkg.sha512"
+      "sha512": "sha512-9acz3fExifstaoKTAvHVwRGMFrtb1QLlT6KfxOFTYM4dksuzwpkApjt0xP+yJcuRsPcf14F1b0Du3GgfKZWHJw==",
+      "path": "microsoft.net.test.sdk/16.9.1",
+      "hashPath": "microsoft.net.test.sdk.16.9.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -1679,19 +1733,19 @@
       "path": "microsoft.netcore.targets/1.1.3",
       "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/16.5.0": {
+    "Microsoft.TestPlatform.ObjectModel/16.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NnLFxmFBCAS6kye2JFszD5WKgj4Zve5KX/R0mhYwh6BVnSeybI2unRnjEPtLyY3CAVhwrY4bh/8LNFtslAcGZg==",
-      "path": "microsoft.testplatform.objectmodel/16.5.0",
-      "hashPath": "microsoft.testplatform.objectmodel.16.5.0.nupkg.sha512"
+      "sha512": "sha512-UuS6HBi6pVJDGS5pmf6Mi38oSQVQ4vE5AOmNJzA5WgOUlFmvg9fTq9KCSd5o+UPSVH420t9wthj2Q0M9Yfb+HA==",
+      "path": "microsoft.testplatform.objectmodel/16.9.1",
+      "hashPath": "microsoft.testplatform.objectmodel.16.9.1.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/16.5.0": {
+    "Microsoft.TestPlatform.TestHost/16.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytGymboQIvjNX5pLC0yp/Bz9sGDHqSnLQgBRtd4VrqOUgKmmcfxMYZ6p0TBZgAT1oijdC6xqUZ7rl8mbaaXTJw==",
-      "path": "microsoft.testplatform.testhost/16.5.0",
-      "hashPath": "microsoft.testplatform.testhost.16.5.0.nupkg.sha512"
+      "sha512": "sha512-j/lZDlkuoUJ+lRJXOXLJpwUGXmko5/woAPo/hN6QhFRo0J5wscQPoPJ1isvXpB4Iw7x7A3jYllxR5QjV3cMlRw==",
+      "path": "microsoft.testplatform.testhost/16.9.1",
+      "hashPath": "microsoft.testplatform.testhost.16.9.1.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -1735,19 +1789,19 @@
       "path": "nuget.frameworks/5.0.0",
       "hashPath": "nuget.frameworks.5.0.0.nupkg.sha512"
     },
-    "NUnit/3.12.0": {
+    "NUnit/3.13.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3oJTrcUcT9wmweBUwgUf0f1XIYy6RZq2ziV+RM95HMKAJGsHPN2i3MKK1dAPvDPMRLz799Llj4eyu/STB9Q7OA==",
-      "path": "nunit/3.12.0",
-      "hashPath": "nunit.3.12.0.nupkg.sha512"
+      "sha512": "sha512-vWBvrSelmTYwqHWvO3dA63z7cOpaFR/3nJ9MMVLBkWeaWa7oiglPPm5g1h96B4i2XXqjFexxhR5MyMjmIJYPfg==",
+      "path": "nunit/3.13.1",
+      "hashPath": "nunit.3.13.1.nupkg.sha512"
     },
-    "NUnit3TestAdapter/3.16.1": {
+    "NUnit3TestAdapter/3.17.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wKuxi7G9Gs2I9gnckwtMVzbPIy7vkNj+FafrmQPaYCUguT+se5kmzI3XwsVCXEalWk9pSYZW7roBkNu4ogn3DA==",
-      "path": "nunit3testadapter/3.16.1",
-      "hashPath": "nunit3testadapter.3.16.1.nupkg.sha512"
+      "sha512": "sha512-I9MNvK+GM2yXrHPitwZkAZKU9sYI2OO/8wKC+VuBD7V3z+ySQ1pSopX/urr0ooedI8/TIcajYPRO4vGRr7AM8A==",
+      "path": "nunit3testadapter/3.17.0",
+      "hashPath": "nunit3testadapter.3.17.0.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",
@@ -2014,6 +2068,13 @@
       "sha512": "sha512-rJkrJD3kBI5B712aRu4DpSIiHRtr6QlfZSQsb0hYHrDCZORXCFjQfoipo2LaMUHoT9i1B7j7MnfaEKWDFmFQNQ==",
       "path": "system.reflection.extensions/4.3.0",
       "hashPath": "system.reflection.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Metadata/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
+      "path": "system.reflection.metadata/1.6.0",
+      "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
     },
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",

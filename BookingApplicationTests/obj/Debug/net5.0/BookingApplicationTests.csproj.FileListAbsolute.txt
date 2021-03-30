@@ -154,3 +154,7 @@ C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplication
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\BookingBusiness.exe
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\BookingBusiness.dll
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\BookingBusiness.pdb
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\testhost.exe
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\nunit.engine.core.dll
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingApplicationTests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

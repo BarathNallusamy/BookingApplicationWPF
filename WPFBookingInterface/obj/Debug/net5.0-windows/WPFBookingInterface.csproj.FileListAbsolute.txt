@@ -68,3 +68,7 @@ C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterfac
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\bin\Debug\net5.0-windows\BookingBusiness.exe
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\bin\Debug\net5.0-windows\BookingBusiness.dll
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\bin\Debug\net5.0-windows\BookingBusiness.pdb
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\bin\Debug\net5.0-windows\Humanizer.dll
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\WPFBookingInterface\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
