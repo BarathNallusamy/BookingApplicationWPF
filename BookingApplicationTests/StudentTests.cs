@@ -45,8 +45,13 @@ namespace BookingApplicationTests
             {
                 
                 _studentManager.Create(a,b,c);
-                int results = 1;
-                var stuIdQuery = db.Students.Where(s => s.StudentID == results).FirstOrDefault();
+                var stuIdQuery = db.Students.OrderBy(s => s.StudentID);
+                int result = 0;
+                foreach (var item in stuIdQuery)
+                {
+                     result= item.StudentID;
+                }
+                Assert.AreEqual(result, expected);
             }
         }
 

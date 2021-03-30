@@ -68,3 +68,7 @@ C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\bin\Deb
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\bin\Debug\net5.0-windows\BookingBusiness.pdb
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\bin\Debug\net5.0-windows\Booking_ApplicationSystem.pdb
 C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\obj\Debug\net5.0-windows\BookingGUI.csproj.CopyComplete
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\obj\Debug\net5.0-windows\BookingWindow.g.cs
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\obj\Debug\net5.0-windows\ViewCancelBooking.g.cs
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\obj\Debug\net5.0-windows\BookingWindow.baml
+C:\Users\Baratharun\Visual C#\Masterclass\Booking Application\BookingGUI\obj\Debug\net5.0-windows\ViewCancelBooking.baml

@@ -18,6 +18,15 @@ namespace BookingBusiness
             {
                 db.Students.Add(newStudent);
                 db.SaveChanges();
+                SelectedStudent = db.Students.Find(newStudent.StudentID);
+            }
+        }
+
+        public List<Student> RetrieveAll()
+        {
+            using (var db = new AcademyContext())
+            {
+                return db.Students.ToList();
             }
         }
     }

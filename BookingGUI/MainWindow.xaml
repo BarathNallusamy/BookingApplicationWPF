@@ -27,17 +27,17 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="LabelTitle" Grid.Row="0" Grid.ColumnSpan="2" Background="BurlyWood" >Welcome</Label>
-                <Label x:Name="LabelFirstName" Grid.Row="1" Grid.Column="0" Background="Bisque">FirstName</Label>
-                <Label x:Name="LabelLastName" Grid.Row="2" Grid.Column="0" Background="Bisque">LastName</Label>
-                <Label x:Name="LabelEmail" Grid.Row="3" Grid.Column="0" Background="Bisque">Email</Label>
+                <Label x:Name="LabelTitle" Grid.Row="0" Grid.ColumnSpan="2" Background="WhiteSmoke" >Welcome</Label>
+                <Label x:Name="LabelFirstName" Grid.Row="1" Grid.Column="0" Background="WhiteSmoke">FirstName</Label>
+                <Label x:Name="LabelLastName" Grid.Row="2" Grid.Column="0" Background="WhiteSmoke">LastName</Label>
+                <Label x:Name="LabelEmail" Grid.Row="3" Grid.Column="0" Background="WhiteSmoke">Email</Label>
 
                
                 <TextBox x:Name="TextFirstName" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
                 <TextBox x:Name="TextLastName" Grid.Row="2" Grid.Column="1" Background="LightGreen"></TextBox>
                 <TextBox x:Name="TextEmail" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
                 <!--Register button-->
-                <Button x:Name="ButtonRegister" Grid.Row="4" Grid.Column="1" Background="#8db0e8" Content="Register" Click="ButtonRegister_Click"/>
+                <Button x:Name="ButtonRegister" Grid.Row="4" Grid.ColumnSpan="2" Background="#8db0e8" Content="Register" Click="ButtonRegister_Click"/>
                 
             </Grid>
             <Grid Grid.Column= "1">
