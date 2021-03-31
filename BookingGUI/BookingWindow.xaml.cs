@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BookingBusiness;
 
 namespace BookingGUI
 {
@@ -19,9 +20,12 @@ namespace BookingGUI
     /// </summary>
     public partial class BookingWindow : Window
     {
+        private CourseManager _courseManager = new CourseManager();
+
         public BookingWindow()
         {
             InitializeComponent();
+            PopulateCourseListBox();
         }
 
         private void ButtonBook_Click(object sender, RoutedEventArgs e)
@@ -42,6 +46,11 @@ namespace BookingGUI
         private void CourseId_selected(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void PopulateCourseListBox()
+        {
+            CourseListBox.ItemsSource = _courseManager.RetrieveAll();
         }
     }
 }

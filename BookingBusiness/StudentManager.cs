@@ -29,5 +29,10 @@ namespace BookingBusiness
                 return db.Students.ToList();
             }
         }
+
+        public void SetSelectedCustomer(object selectedItem)
+        {
+            SelectedStudent = (Student)selectedItem;
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Booking_ApplicationSystem
 {
-    public class Course
+    public partial class Course
     {
         
         public int CourseID { get; set; }
