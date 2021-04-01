@@ -23,6 +23,16 @@ namespace BookingBusiness
                 //db.Add(new Course() { CourseName = "Testing Frameworks", CoursePrice = 34.99 });
                 //db.SaveChanges();
 
+
+
+                //var courseUpdate = db.Courses.Where(c => c.CourseID == 3).FirstOrDefault();
+                //courseUpdate.CourseName = "C Sharp";
+                //db.SaveChanges();
+
+                //var courseUpdate2 = db.Courses.Where(c => c.CourseID == 10).FirstOrDefault();
+                //courseUpdate2.CourseName = "NUnit";
+                //db.SaveChanges();
+
                 Console.WriteLine("Course table populated successfully");
 
                 var courseQuery = db.Courses.OrderBy(c => c.CourseName);
@@ -33,6 +43,7 @@ namespace BookingBusiness
                 }
 
             }
+
         }
     }
 }

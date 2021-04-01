@@ -38,11 +38,11 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label x:Name="LabelStuId" Grid.Row="0" Grid.Column="0" Background="Bisque">Student ID</Label>
-                <Label x:Name="LabelCourseId" Grid.Row="1" Grid.Column="0" Background="Bisque">Course ID</Label>
+                <Label x:Name="LabelCourseId" Grid.Row="1" Grid.Column="0" Background="Bisque">Course Name</Label>
                 <Label x:Name="LabelPostalCode" Grid.Row="2" Grid.Column="0" Background="Bisque">Select Date</Label>
                 
                 <ComboBox x:Name="StudentID" SelectionChanged="StuId_selected" Grid.Row="0" Grid.Column="1"></ComboBox>
-                <ComboBox x:Name="CourseID" SelectionChanged="CourseId_selected" Grid.Row="1" Grid.Column="1"></ComboBox>
+                <ComboBox x:Name="CourseID" SelectionChanged="CourseId_selected" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding}"></ComboBox>
                 <CalendarItem Grid.Row="2" Grid.Column="1"></CalendarItem>
 
                 <Button x:Name="CreateBooking" Grid.Row="5" Grid.Column="2" Background="#8db0e8" Content="Book" Click="ButtonBook_Click"/>

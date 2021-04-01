@@ -31,7 +31,7 @@ namespace BookingGUI
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
             _stuManager.Create(TextFirstName.Text, TextLastName.Text, TextEmail.Text);
-            MessageBox.Show($"Congratulations!\n You have registered successfully\n\n" +
+            MessageBox.Show($"Congratulations {TextFirstName.Text}!\n You have registered successfully\n\n" +
                 $"Your Student ID is: {_stuManager.SelectedStudent.StudentID}");
         }
 

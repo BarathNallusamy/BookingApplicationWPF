@@ -48,6 +48,16 @@ namespace BookingBusiness
             }
         }
 
+        //public string GetCourseNames()
+        //{
+        //    using(var db = new AcademyContext())
+        //    {
+        //        var courseNamesuqery =
+        //            from courses in db.Courses
+        //            select courses.CourseName;
+        //    }
+        //}
+
         public List<Course> RetrieveAll()
         {
             using (var db = new AcademyContext())
@@ -56,9 +66,9 @@ namespace BookingBusiness
             }
         }
 
-        public void SetSelectedCourse(object selectedItem)
+        public void SetSelectedCourseId(int selectedItem)
         {
-            SelectedCourse = (Course)selectedItem;
+            SelectedCourse.CourseID = selectedItem;
         }
     }
 }

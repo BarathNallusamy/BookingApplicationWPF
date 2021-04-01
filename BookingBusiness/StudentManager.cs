@@ -30,9 +30,9 @@ namespace BookingBusiness
             }
         }
 
-        public void SetSelectedCustomer(object selectedItem)
+        public void SetSelectedStudentID(int selectedItem)
         {
-            SelectedStudent = (Student)selectedItem;
+            SelectedStudent.StudentID = selectedItem;
         }
     }
 }

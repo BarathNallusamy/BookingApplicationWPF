@@ -11,7 +11,7 @@ namespace Booking_ApplicationSystem.Customization
     {
         public override string ToString()
         {
-            return "";
+            return $"";
         }       
     }
 }
