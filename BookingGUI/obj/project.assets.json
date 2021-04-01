@@ -5740,23 +5740,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Baratharun\\.nuget\\packages\\": {},
+    "C:\\Users\\nallu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Baratharun\\Visual C#\\Masterclass\\Booking Application\\BookingGUI\\BookingGUI.csproj",
+      "projectUniqueName": "C:\\Users\\nallu\\BookingApplicationWPF\\BookingGUI\\BookingGUI.csproj",
       "projectName": "BookingGUI",
-      "projectPath": "C:\\Users\\Baratharun\\Visual C#\\Masterclass\\Booking Application\\BookingGUI\\BookingGUI.csproj",
-      "packagesPath": "C:\\Users\\Baratharun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Baratharun\\Visual C#\\Masterclass\\Booking Application\\BookingGUI\\obj\\",
+      "projectPath": "C:\\Users\\nallu\\BookingApplicationWPF\\BookingGUI\\BookingGUI.csproj",
+      "packagesPath": "C:\\Users\\nallu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nallu\\BookingApplicationWPF\\BookingGUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Baratharun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nallu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5771,8 +5771,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Baratharun\\Visual C#\\Masterclass\\Booking Application\\BookingBusiness\\BookingBusiness.csproj": {
-              "projectPath": "C:\\Users\\Baratharun\\Visual C#\\Masterclass\\Booking Application\\BookingBusiness\\BookingBusiness.csproj"
+            "C:\\Users\\nallu\\BookingApplicationWPF\\BookingBusiness\\BookingBusiness.csproj": {
+              "projectPath": "C:\\Users\\nallu\\BookingApplicationWPF\\BookingBusiness\\BookingBusiness.csproj"
             }
           }
         }
