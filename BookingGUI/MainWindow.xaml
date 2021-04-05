@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingGUI"
         mc:Ignorable="d"
-        Title="ABC Booking Application" Height="300" Width="500">
+        Title="ABC Booking Application" Height="300" Width="700">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -27,15 +27,15 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="LabelTitle" Grid.Row="0" Grid.ColumnSpan="2" Background="WhiteSmoke" >Welcome</Label>
+                <Label x:Name="LabelTitle" Grid.Row="0" Grid.ColumnSpan="2" Background="DarkBlue" FontSize="30" Foreground="White" >Welcome</Label>
                 <Label x:Name="LabelFirstName" Grid.Row="1" Grid.Column="0" Background="WhiteSmoke">FirstName</Label>
                 <Label x:Name="LabelLastName" Grid.Row="2" Grid.Column="0" Background="WhiteSmoke">LastName</Label>
                 <Label x:Name="LabelEmail" Grid.Row="3" Grid.Column="0" Background="WhiteSmoke">Email</Label>
 
                
-                <TextBox x:Name="TextFirstName" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextLastName" Grid.Row="2" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextEmail" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
+                <TextBox x:Name="TextFirstName" Grid.Row="1" Grid.Column="1" Background="Yellow"></TextBox>
+                <TextBox x:Name="TextLastName" Grid.Row="2" Grid.Column="1" Background="Yellow"></TextBox>
+                <TextBox x:Name="TextEmail" Grid.Row="3" Grid.Column="1" Background="Yellow"></TextBox>
                 <!--Register button-->
                 <Button x:Name="ButtonRegister" Grid.Row="4" Grid.ColumnSpan="2" Background="#8db0e8" Content="Register" Click="ButtonRegister_Click"/>
                 
@@ -45,10 +45,12 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Button x:Name="CreateBooking" Grid.Row="0" Grid.Column="1" Background="#8db0e8" Content="Create Booking" Click="CreateBooking_Click"/>
-                <Button x:Name="ViewBooking" Grid.Row="1" Grid.Column="1" Background="#8db0e8" Content="View/Cancel Booking" Click="ViewCancelBooking_Click"/>
-                <Button x:Name="Exit" Grid.Row="2" Grid.Column="1" Background="IndianRed" Content="Close Application" Click="Exit_Click"/>
+                <Button x:Name="btnViewStudents" Grid.Row="0" Grid.Column="1" Background="#8db0e8" Content="View Students" Click="ViewStudents_Click"/>
+                <Button x:Name="CreateBooking" Grid.Row="1" Grid.Column="1" Background="#8db0e8" Content="Create Booking" Click="CreateBooking_Click"/>
+                <Button x:Name="ViewBooking" Grid.Row="2" Grid.Column="1" Background="#8db0e8" Content="View/Cancel Booking" Click="ViewCancelBooking_Click"/>
+                <Button x:Name="Exit" Grid.Row="3" Grid.Column="1" Background="IndianRed" Content="Close Application" Click="Exit_Click"/>
             </Grid>
         </Grid>
     </Grid>

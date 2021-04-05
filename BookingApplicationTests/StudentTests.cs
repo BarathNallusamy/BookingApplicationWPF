@@ -35,25 +35,27 @@ namespace BookingApplicationTests
                 var numberOfStudentsAfterAdd = db.Students.Count();
 
                 Assert.AreEqual(numberOfStudentsBeforeAdding + 1, numberOfStudentsAfterAdd);
+
             }
         }
 
-        [TestCase("Baray", "Nallu", "Nallu.baray@gmail.com",1)]
-        public void CheckStudentIDValueAfterCreatingANewStudent(string a,string b,string c, int expected)
+        [Test]
+        public void WhenRegisteredWithTheSameEmailAddressSystemThrowsAnError()
         {
             using (var db = new AcademyContext())
             {
-                
-                _studentManager.Create(a,b,c);
-                var stuIdQuery = db.Students.OrderBy(s => s.StudentID);
-                int result = 0;
-                foreach (var item in stuIdQuery)
-                {
-                     result= item.StudentID;
-                }
-                Assert.AreEqual(result, expected);
+                _studentManager.Create("XYZ", "ABCD", "ABC@gmail.com");
+                db.SaveChanges();
+
+                bool expected = true;
+                _studentManager.Create("XYZ", "ABCD", "ABC@gmail.com");
+                bool results = _studentManager.CheckDuplicateRecords("ABC@gmail.com");
+
+                Assert.AreEqual(expected,results);
+
             }
         }
+
 
         [TearDown]
         public void TearDown()

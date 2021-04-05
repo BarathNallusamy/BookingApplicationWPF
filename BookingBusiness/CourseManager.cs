@@ -48,15 +48,6 @@ namespace BookingBusiness
             }
         }
 
-        //public string GetCourseNames()
-        //{
-        //    using(var db = new AcademyContext())
-        //    {
-        //        var courseNamesuqery =
-        //            from courses in db.Courses
-        //            select courses.CourseName;
-        //    }
-        //}
 
         public List<Course> RetrieveAll()
         {

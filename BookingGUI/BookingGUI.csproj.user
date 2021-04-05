@@ -10,6 +10,9 @@
     <Compile Update="BookingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="StudentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ViewCancelBooking.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StudentWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewCancelBooking.xaml">

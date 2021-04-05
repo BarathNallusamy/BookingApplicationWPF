@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingGUI"
         mc:Ignorable="d"
-        Title="BookingWindow" Height="450" Width="800">
+        Title="BookingWindow" Height="600" Width="1200">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,30 +20,41 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <ListBox x:Name="BookingListBox" Background="Beige"  Grid.Row="0" Grid.Column="0">
-                </ListBox>
-                <ListBox x:Name="CourseListBox" Background="Beige"  Grid.Row="1" Grid.Column="0">
-                </ListBox>
+                <Grid Grid.Row="0">
+                    <DataGrid Name="bookingList" />
+                </Grid>
+                <Grid Grid.Row="1" Background ="AliceBlue">
+                    <DataGrid Name="courseList" />
+                </Grid>
             </Grid>
             
             <Grid Grid.Column= "1">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="LabelStuId" Grid.Row="0" Grid.Column="0" Background="Bisque">Student ID</Label>
-                <Label x:Name="LabelCourseId" Grid.Row="1" Grid.Column="0" Background="Bisque">Course Name</Label>
-                <Label x:Name="LabelPostalCode" Grid.Row="2" Grid.Column="0" Background="Bisque">Select Date</Label>
-                
-                <ComboBox x:Name="StudentID" SelectionChanged="StuId_selected" Grid.Row="0" Grid.Column="1"></ComboBox>
+                <Label x:Name="LabelStuId" Grid.Row="0" Grid.Column="0" Background="Bisque" FontSize="30">Student ID >></Label>
+                <Label x:Name="LabelCourseId" Grid.Row="1" Grid.Column="0" Background="Bisque" FontSize="30">Course ID >></Label>
+                <Label x:Name="Calendar" Grid.Row="2" Grid.Column="0" Background="Bisque" FontSize="30">Select Date</Label>
+                <Label x:Name="SelectedDate" Grid.Row="3" Grid.Column="0" Background="Bisque" FontSize="30">Selected Date</Label>
+
+                <ComboBox x:Name="StudentID"  SelectionChanged="StuId_selected" Grid.Row="0" Grid.Column="1"></ComboBox>
                 <ComboBox x:Name="CourseID" SelectionChanged="CourseId_selected" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding}"></ComboBox>
-                <CalendarItem Grid.Row="2" Grid.Column="1"></CalendarItem>
+                <Viewbox Stretch="Fill" StretchDirection="UpOnly" Grid.Column="1" Grid.Row="2">
+                    <Calendar Name="CalenderBox" SelectionMode="SingleRange"
+                              SelectedDatesChanged="Calendar_SelectedDatesChanged"  
+                              DisplayDateChanged="Calendar_DisplayDateChanged"  
+                              DisplayModeChanged="Calendar_DisplayModeChanged" />
+                </Viewbox>
+                <Label Grid.Row="3" Grid.Column="3" x:Name="lblSelectedDate">
+                </Label>
 
                 <Button x:Name="CreateBooking" Grid.Row="5" Grid.Column="2" Background="#8db0e8" Content="Book" Click="ButtonBook_Click"/>
                 <Button x:Name="CancelBooking" Grid.Row="5" Grid.Column="0" Background="IndianRed" Content="Exit" Click="ButtonExit_Click"/>

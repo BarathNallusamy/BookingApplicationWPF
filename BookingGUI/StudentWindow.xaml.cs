@@ -18,43 +18,32 @@ using System.Windows.Shapes;
 namespace BookingGUI
 {
     /// <summary>
-    /// Interaction logic for ViewCancelBooking.xaml
+    /// Interaction logic for StudentWindow.xaml
     /// </summary>
-    public partial class ViewCancelBooking : Window
+    public partial class StudentWindow : Window
     {
-        public ViewCancelBooking()
+        public StudentWindow()
         {
             InitializeComponent();
-            PopulateBookingListBox();
+            PopulateStudentListBox();
         }
 
-        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
+        private void studentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        public void PopulateBookingListBox()
+        public void PopulateStudentListBox()
         {
             string cmdString = string.Empty;
             using (SqlConnection connect = ConnectionHelper.GetConnection())
             {
-                cmdString = "select BookingID, FirstName+' '+LastName AS 'FullName', Email, CourseName , CoursePrice, BookingDate, BookingStatus  from Bookings b join Students s on b.StudentID = s.StudentID join Courses c on b.CourseID = c.CourseID";
+                cmdString = "select * from students";
                 SqlCommand cmd = new SqlCommand(cmdString, connect);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable("Bookings");
+                DataTable dt = new DataTable("Students");
                 sda.Fill(dt);
-                bookingList.ItemsSource = dt.DefaultView;
+                studentList.ItemsSource = dt.DefaultView;
                 connect.Close();
             }
         }

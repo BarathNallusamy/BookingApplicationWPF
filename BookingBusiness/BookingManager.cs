@@ -12,15 +12,18 @@ namespace BookingBusiness
     {
         public Booking SelectedBooking { get; set; }
 
-        public void Create(int studentID, int courseID)
+        public void Create(int studentID, int courseID, string selectedDate)
         {
-            var newBooking = new Booking() { StudentID =studentID, CourseID =courseID, BookingStatus = "Active"};
+            var newBooking = new Booking() { StudentID =studentID, CourseID =courseID, BookingDate=selectedDate, BookingStatus = "Active"};
 
             using (var db = new AcademyContext())
             {
                 db.Bookings.Add(newBooking);
                 db.SaveChanges();
+                SelectedBooking = db.Bookings.Find(newBooking.BookingID);
             }
         }
+
+
     }
 }

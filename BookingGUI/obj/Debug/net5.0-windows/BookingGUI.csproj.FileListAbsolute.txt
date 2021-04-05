@@ -146,3 +146,5 @@ C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\Booking
 C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\ref\BookingGUI.dll
 C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\BookingGUI.pdb
 C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\BookingGUI.genruntimeconfig.cache
+C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\StudentWindow.g.cs
+C:\Users\nallu\BookingApplicationWPF\BookingGUI\obj\Debug\net5.0-windows\StudentWindow.baml

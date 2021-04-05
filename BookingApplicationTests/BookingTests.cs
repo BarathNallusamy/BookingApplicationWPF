@@ -31,7 +31,7 @@ namespace BookingApplicationTests
             using (var db = new AcademyContext())
             {
                 var bookingTotalBeforeAdding = db.Bookings.Count();
-                _bookingManager.Create(2,2);
+                _bookingManager.Create(3,2,"01/05/2021");
                 var bookingTotalAfterAdd = db.Bookings.Count();
 
                 Assert.AreEqual(bookingTotalBeforeAdding + 1, bookingTotalAfterAdd);

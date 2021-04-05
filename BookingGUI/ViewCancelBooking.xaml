@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingGUI"
         mc:Ignorable="d"
-        Title="ViewCancelBooking" Height="450" Width="800">
+        Title="ViewCancelBooking" Height="450" Width="1200">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -15,8 +15,9 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <ListBox x:Name="BookingListBox" Background="Beige"  Grid.Row="4" Grid.Column="0" SelectionChanged="BookingListBox_SelectionChanged">
-            </ListBox>
+            <Grid Grid.Row="0">
+                <DataGrid Name="bookingList" SelectionChanged="bookingList_SelectionChanged" />
+            </Grid>
             <Grid Grid.Column= "1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />

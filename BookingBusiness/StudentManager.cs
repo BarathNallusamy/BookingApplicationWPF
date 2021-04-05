@@ -34,5 +34,22 @@ namespace BookingBusiness
         {
             SelectedStudent.StudentID = selectedItem;
         }
+
+        public bool CheckDuplicateRecords(string emailID)
+        {
+            using(var db = new AcademyContext())
+            {
+                var findEmailQuery = db.Students.Where(e=> e.Email== emailID);
+
+                if (findEmailQuery.Count()>0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

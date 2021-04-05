@@ -11,6 +11,7 @@ namespace Booking_ApplicationSystem
         public int BookingID { get; set; }
         public int CourseID { get; set; }
         public int StudentID { get; set; }
+        public string BookingDate { get; set; }
         public string BookingStatus { get; set; }
 
         public Course Course { get; set; }
