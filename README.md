@@ -36,7 +36,7 @@ As a student, once I have registered on the system I should be able to view cour
 ## Overall project retrospective 
 In this project I have learned how to modularise the codes to write simple applications. I was able to seperate projects for backend database and front end WPF then use Entity framework to work in the middle as a communicator. This enabled me to use the OOP encapsulation to write public functions in C# classes and use them in the front end application, thus making the software more secure and robust. 
 
-This application is still in a basic level and it has a large future scope such as creating user login and enabling varios permissions for administrators. Also we can include an option for  students to write review after competing their courses.
+This application is still in a basic level and it has a large future scope such as creating user login and enabling various permissions for administrators. Also we can include an option for  students to write review after completing their courses successfully.
 
 ***User Guide***
 To start the application please run the BookingGUI project as the startup project. 
