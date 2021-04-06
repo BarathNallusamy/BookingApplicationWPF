@@ -24,6 +24,22 @@ namespace BookingBusiness
             }
         }
 
+        //public bool CheckDuplicateRecords(int bookingID)
+        //{
+        //    using (var db = new AcademyContext())
+        //    {
+        //        var findEmailQuery = db.Students.Find(bookingID);
+
+        //        if (findEmailQuery)
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //}
 
     }
 }
