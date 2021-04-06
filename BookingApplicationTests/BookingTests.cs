@@ -38,7 +38,18 @@ namespace BookingApplicationTests
             }
         }
 
-        
+        [Test]
+        public void WhenAStudentSelectsAnotherBookingForTheSameDateSystemReturnsTrue()
+        {
+            using (var db = new AcademyContext())
+            {
+                bool results = _bookingManager.DuplicateBookingRecord(3, "01/05/2021");
+                bool expected = true;
+
+                Assert.AreEqual(expected, results);
+            }
+        }
+
 
         [TearDown]
         public void TearDown()

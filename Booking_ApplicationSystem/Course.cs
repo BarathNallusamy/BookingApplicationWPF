@@ -16,9 +16,5 @@ namespace Booking_ApplicationSystem
 
         public ICollection<Booking> Bookings { get; set; }= new ObservableCollection<Booking>();
 
-        public override string ToString()
-        {
-            return $"Course ID: {CourseID}\tCourse Name: {CourseName}\tCourse Price: £{CoursePrice}"; 
-        }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Booking_ApplicationSystem;
+using Microsoft.Data.SqlClient;
 
 namespace BookingBusiness
 {
@@ -22,12 +24,13 @@ namespace BookingBusiness
             }
         }
 
-        public List<Student> RetrieveAll()
+        public DataSet RetrieveStudentID()
         {
-            using (var db = new AcademyContext())
-            {
-                return db.Students.ToList();
-            }
+            SqlConnection connect = ConnectionHelper.GetConnection();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT StudentID FROM Students", connect);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Students");
+            return ds;
         }
 
         public void SetSelectedStudentID(int selectedItem)

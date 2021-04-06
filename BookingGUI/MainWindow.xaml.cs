@@ -36,6 +36,7 @@ namespace BookingGUI
                 MessageBox.Show("Please enter a valid Email address", "Invalid Email", MessageBoxButton.OK, MessageBoxImage.Error);
                 TextEmail.Select(0, TextEmail.Text.Length);
                 TextEmail.Focus();
+                TextEmail.Text = string.Empty;
             }
             else if (_stuManager.CheckDuplicateRecords(TextEmail.Text))
             {
@@ -48,6 +49,9 @@ namespace BookingGUI
                 _stuManager.Create(TextFirstName.Text, TextLastName.Text, TextEmail.Text);
                 MessageBox.Show($"Congratulations {TextFirstName.Text}!\n" +
                     $"Your Student ID is: {_stuManager.SelectedStudent.StudentID}");
+                TextFirstName.Text = string.Empty;
+                TextLastName.Text = string.Empty;
+                TextEmail.Text = string.Empty;
             }
         }
 

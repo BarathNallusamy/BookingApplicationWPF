@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Booking_ApplicationSystem;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookingBusiness
@@ -24,22 +26,38 @@ namespace BookingBusiness
             }
         }
 
-        //public bool CheckDuplicateRecords(int bookingID)
-        //{
-        //    using (var db = new AcademyContext())
-        //    {
-        //        var findEmailQuery = db.Students.Find(bookingID);
+        public DataTable RetreiveBookingData()
+        {
+            string cmdString = string.Empty;
+            using (SqlConnection connect = ConnectionHelper.GetConnection())
+            {
+                cmdString = "select BookingID, FirstName+' '+LastName AS 'FullName', Email, CourseName , CoursePrice, BookingDate, BookingStatus  from Bookings b join Students s on b.StudentID = s.StudentID join Courses c on b.CourseID = c.CourseID";
+                SqlCommand cmd = new SqlCommand(cmdString, connect);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Bookings");
+                sda.Fill(dt);
+                connect.Close();
+                return dt;
+            }
+        }
 
-        //        if (findEmailQuery)
-        //        {
-        //            return true;
-        //        }
-        //        else
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //}
+
+        public bool DuplicateBookingRecord(int studentID, string selectedDate)
+        {
+            using (var db = new AcademyContext())
+            {
+                var findBookingQuery = db.Bookings.Where(b=> b.StudentID == studentID && b.BookingDate == selectedDate);
+
+                if (findBookingQuery.Count()>0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
     }
 }

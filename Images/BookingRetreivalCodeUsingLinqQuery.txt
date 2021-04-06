@@ -1,0 +1,22 @@
+public List<Booking> RetreiveBookingDate()
+        {
+            using (var db = new AcademyContext())
+            {
+                var bookingQuery =
+                    from b in db.Bookings
+                    orderby b.BookingID
+                    join s in db.Students on b.StudentID equals s.StudentID
+                    join c in db.Courses on b.CourseID equals c.CourseID
+                    select new
+                    {
+                        BookingID = b.BookingID,
+                        StudentName = s.FirstName +' '+ s.LastName,
+                        CourseName = c.CourseName,
+                        BookedDate = b.BookingDate
+                    };
+
+                var query = db.Bookings.FromSqlRaw(bookingQuery.ToQueryString()).ToList();
+                return query;
+                
+            }
+        }
