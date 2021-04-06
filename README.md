@@ -58,8 +58,8 @@ _Improvement_
 - Make the GUI design more user friendly.
 
 
-![Start of sprint #1](/Images/sprint_one_point_1.jpg)
-![End of sprint #1](/Images/sprint_one_point_2.jpg)
+![Start of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20one%20point%201.jpg)
+![End of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20one%20point%202.jpg)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -97,8 +97,8 @@ _Improvement_
 
 
 
-![Start of sprint #1](/Images/sprint_two_point_1.jpg)
-![End of sprint #1](/Images/sprint_two_point_2.jpg)
+![Start of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20two%20point%201.jpg)
+![End of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20two%20point%202.jpg)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -120,8 +120,8 @@ _What went well_
 _Improvement_
 - Write more robust query using Linq syntax or method syntax 
 
-![Start of sprint #1](/Images/sprint_three_point_1.jpg)
-![End of sprint #1](/Images/sprint_three_point_2.jpg)
+![Start of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20three%20point%201.jpg)
+![End of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20three%20point%202.jpg)
 
 ## Overall project retrospective 
 In this project I have learned how to modularise the codes to write simple applications. I was able to seperate projects for backend database and front end WPF then use Entity framework to work in the middle as a communicator. This enabled me to use the OOP encapsulation to write public functions in C# classes and use them in the front end application, thus making the software more secure and robust. 
