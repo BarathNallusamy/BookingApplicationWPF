@@ -22,6 +22,8 @@ namespace BookingGUI
     /// </summary>
     public partial class StudentWindow : Window
     {
+        StudentManager _studentManager = new StudentManager();
+
         public StudentWindow()
         {
             InitializeComponent();
@@ -35,17 +37,7 @@ namespace BookingGUI
 
         public void PopulateStudentListBox()
         {
-            string cmdString = string.Empty;
-            using (SqlConnection connect = ConnectionHelper.GetConnection())
-            {
-                cmdString = "select * from students";
-                SqlCommand cmd = new SqlCommand(cmdString, connect);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable("Students");
-                sda.Fill(dt);
-                studentList.ItemsSource = dt.DefaultView;
-                connect.Close();
-            }
+            studentList.ItemsSource = _studentManager.RetreiveStudentTable().DefaultView;
         }
     }
 }

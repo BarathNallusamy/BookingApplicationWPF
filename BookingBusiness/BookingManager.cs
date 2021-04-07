@@ -26,6 +26,15 @@ namespace BookingBusiness
             }
         }
 
+        public void Update(int bookingID, int courseId, string bookingDate)
+        {
+            using (var db = new AcademyContext())
+            {
+                SelectedBooking = db.Bookings.Where(b => b.BookingID == bookingID).FirstOrDefault();
+                db.SaveChanges();
+            }
+        }
+
         public DataTable RetreiveBookingData()
         {
             string cmdString = string.Empty;

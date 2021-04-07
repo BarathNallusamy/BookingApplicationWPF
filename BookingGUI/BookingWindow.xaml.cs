@@ -99,29 +99,11 @@ namespace BookingGUI
 
         }
 
-        private void StuId_selected(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void CourseId_selected(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void Calendar_DisplayDateChanged(object sender, CalendarDateChangedEventArgs e)
-        {
-
-        }
-
-        private void Calendar_DisplayModeChanged(object sender, CalendarModeChangedEventArgs e)
-        {
-
-        }
     }
 }

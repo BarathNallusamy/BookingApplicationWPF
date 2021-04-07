@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingGUI"
         mc:Ignorable="d"
-        Title="ViewCancelBooking" Height="450" Width="1200">
+        Title="ViewCancelBooking" Height="500" Width="1200">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,9 +20,9 @@
             </Grid>
             <Grid Grid.Column= "1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="150" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
@@ -31,20 +31,20 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="LabelId" Grid.Row="0" Grid.Column="0" Background="Bisque" >Booking ID</Label>
-                <Label x:Name="LabelName" Grid.Row="1" Grid.Column="0" Background="Bisque">Full Name</Label>
-                <Label x:Name="LabelStatus" Grid.Row="4" Grid.Column="0" Background="Bisque">Booking status</Label>
-                <Label x:Name="LabelBookDate" Grid.Row="3" Grid.Column="0" Background="Bisque">Booked Date</Label>
-                <Label x:Name="LabelCourseName" Grid.Row="2" Grid.Column="0" Background="Bisque">Course Name</Label>
+                <Label x:Name="lblName" Grid.Row="0" Grid.Column="0" Background="Bisque">Full Name</Label>
+                <Label x:Name="lblCourseID" Grid.Row="1" Grid.Column="0" Background="Bisque">Course ID</Label>
+                <Label x:Name="lblBookingsDate" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Background="Bisque">Booking Date</Label>
 
-                <TextBox x:Name="TextId" Grid.Row="0" Grid.Column="1" Background="LightGreen" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
-                <TextBox x:Name="TextName" Grid.Row="1" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextCity" Grid.Row="2" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextPostalCode" Grid.Row="3" Grid.Column="1" Background="LightGreen"></TextBox>
-                <TextBox x:Name="TextCountry" Grid.Row="4" Grid.Column="1" Background="LightGreen"></TextBox>
+                <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Background="Coral" IsEnabled="False" IsReadOnlyCaretVisible="True"></TextBox>
+                <ComboBox x:Name="cmbCourseID" Grid.Row="1" Grid.Column="1"></ComboBox>
+                <Viewbox Stretch="Fill"  Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
+                    <Calendar Name="CalenderBox" SelectionMode="SingleRange"
+                              SelectedDatesChanged="Calendar_SelectedDatesChanged" />
+                </Viewbox>
 
-                <Button x:Name="ButtonUpdate" Grid.Row="5" Grid.Column="2" Background="#8db0e8" Content="Update" Click="ButtonUpdate_Click"/>
-                <Button x:Name="ButtonCancel" Grid.Row="5" Grid.Column="0" Background="#8db0e8" Content="Cancel" Click="ButtonCancel_Click"/>
+                <Button x:Name="btnUpdate" Grid.Row="4" Grid.Column="1" Background="CadetBlue" Content="Change Booking" Click="btnUpdate_Click"/>
+                <Button x:Name="btnCancel" Grid.Row="4" Grid.Column="0" Background="DarkRed" Content="Cancel Booking" Click="btnCancel_Click"/>
+                <Button x:Name="btnCloseWindow" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="IndianRed" Content="Close window" Click="btnClose_Click"/>
             </Grid>
         </Grid>
     </Grid>

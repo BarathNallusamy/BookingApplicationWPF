@@ -22,27 +22,15 @@ namespace BookingGUI
     /// </summary>
     public partial class ViewCancelBooking : Window
     {
+        CourseManager _courseManager = new CourseManager();
+
         public ViewCancelBooking()
         {
             InitializeComponent();
+            LoadCoursesBox(cmbCourseID);
             PopulateBookingListBox();
         }
 
-        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         public void PopulateBookingListBox()
         {
@@ -58,5 +46,38 @@ namespace BookingGUI
                 connect.Close();
             }
         }
+
+        public void LoadCoursesBox(ComboBox comboBoxID)
+        {
+            comboBoxID.ItemsSource = _courseManager.RetrieveCourseID().Tables[0].DefaultView;
+            comboBoxID.DisplayMemberPath = _courseManager.RetrieveCourseID().Tables[0].Columns["CourseID"].ToString();
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) => this.Close();
+
+
+        private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
     }
 }

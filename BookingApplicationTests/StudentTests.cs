@@ -48,7 +48,6 @@ namespace BookingApplicationTests
                 db.SaveChanges();
 
                 bool expected = true;
-                _studentManager.Create("XYZ", "ABCD", "ABC@gmail.com");
                 bool results = _studentManager.CheckDuplicateRecords("ABC@gmail.com");
 
                 Assert.AreEqual(expected,results);

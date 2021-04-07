@@ -38,6 +38,21 @@ namespace BookingBusiness
             SelectedStudent.StudentID = selectedItem;
         }
 
+        public DataTable RetreiveStudentTable()
+        {
+            string cmdString = string.Empty;
+            using (SqlConnection connect = ConnectionHelper.GetConnection())
+            {
+                cmdString = "select * from students";
+                SqlCommand cmd = new SqlCommand(cmdString, connect);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable("Students");
+                sda.Fill(dt);
+                connect.Close();
+                return dt;
+            }
+        }
+
         public bool CheckDuplicateRecords(string emailID)
         {
             using(var db = new AcademyContext())

@@ -45,13 +45,11 @@
                 <Label x:Name="Calendar" Grid.Row="2" Grid.Column="0" Background="Bisque" FontSize="30">Select Date</Label>
                 <Label x:Name="SelectedDate" Grid.Row="3" Grid.Column="0" Background="Bisque" FontSize="30">Selected Date</Label>
 
-                <ComboBox x:Name="StudentID"  SelectionChanged="StuId_selected" Grid.Row="0" Grid.Column="1"></ComboBox>
-                <ComboBox x:Name="CourseID" SelectionChanged="CourseId_selected" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding}"></ComboBox>
+                <ComboBox x:Name="StudentID"  Grid.Row="0" Grid.Column="1"></ComboBox>
+                <ComboBox x:Name="CourseID" Grid.Row="1" Grid.Column="1"></ComboBox>
                 <Viewbox Stretch="Fill" StretchDirection="UpOnly" Grid.Column="1" Grid.Row="2">
                     <Calendar Name="CalenderBox" SelectionMode="SingleRange"
-                              SelectedDatesChanged="Calendar_SelectedDatesChanged"  
-                              DisplayDateChanged="Calendar_DisplayDateChanged"  
-                              DisplayModeChanged="Calendar_DisplayModeChanged" />
+                              SelectedDatesChanged="Calendar_SelectedDatesChanged" />
                 </Viewbox>
                 <Label Grid.Row="3" Grid.Column="3" x:Name="lblSelectedDate">
                 </Label>
