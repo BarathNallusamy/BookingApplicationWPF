@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0">
-                <DataGrid Name="bookingList"/>
+                <DataGrid Name="bookingList" SelectionChanged="bookingList_SelectionChanged"/>
             </Grid>
             <Grid Grid.Column= "1">
                 <Grid.RowDefinitions>

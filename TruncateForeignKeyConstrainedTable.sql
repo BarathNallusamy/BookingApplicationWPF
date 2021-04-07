@@ -4,3 +4,5 @@
 -- If table is empty and never insert data, use "1"
 -- Use SP https://github.com/reduardo7/TableTruncate
 DBCC CHECKIDENT (Students, RESEED, 0);
+
+Truncate table Bookings;

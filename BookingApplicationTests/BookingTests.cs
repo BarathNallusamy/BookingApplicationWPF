@@ -13,14 +13,14 @@ namespace BookingApplicationTests
         public void Setup()
         {
             _bookingManager = new BookingManager();
-
             using (var db = new AcademyContext())
             {
-                var bookingQuery =
-                    from boo in db.Bookings
-                    where boo.BookingID == 1
-                    select boo;
-                db.Bookings.RemoveRange(bookingQuery);
+                var selectedBooking =
+                from b in db.Bookings
+                where b.BookingID == 1
+                select b;
+
+                //db.Bookings.RemoveRange(selectedBooking);
                 db.SaveChanges();
             }
         }
@@ -31,7 +31,7 @@ namespace BookingApplicationTests
             using (var db = new AcademyContext())
             {
                 var bookingTotalBeforeAdding = db.Bookings.Count();
-                _bookingManager.Create(3,2,"01/05/2021");
+                _bookingManager.Create(2,5,"01/05/2021");
                 var bookingTotalAfterAdd = db.Bookings.Count();
 
                 Assert.AreEqual(bookingTotalBeforeAdding + 1, bookingTotalAfterAdd);
@@ -43,7 +43,9 @@ namespace BookingApplicationTests
         {
             using (var db = new AcademyContext())
             {
-                bool results = _bookingManager.DuplicateBookingRecord(3, "01/05/2021");
+                _bookingManager.Create(2, 5, "01/05/2021");
+
+                bool results = _bookingManager.DuplicateBookingRecord(2, "01/05/2021");
                 bool expected = true;
 
                 Assert.AreEqual(expected, results);
@@ -55,14 +57,14 @@ namespace BookingApplicationTests
         public void TearDown()
         {
             _bookingManager = new BookingManager();
-
             using (var db = new AcademyContext())
             {
-                var bookingQuery =
-                    from boo in db.Bookings
-                    where boo.BookingID == 1
-                    select boo;
-                db.Bookings.RemoveRange(bookingQuery);
+                var selectedBooking =
+                from b in db.Bookings
+                where b.BookingID == 1
+                select b;
+
+                //db.Students.RemoveRange(selectedStudent);
                 db.SaveChanges();
             }
         }

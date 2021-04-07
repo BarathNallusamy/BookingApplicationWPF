@@ -38,6 +38,15 @@ namespace BookingGUI
             bookingList.ItemsSource = _bookingManager.RetreiveBookingData().DefaultView;
         }
 
+        public void PopulateTextField()
+        {
+            if(_bookingManager.SelectedBooking != null)
+            {
+                txtName.Text = _bookingManager.SelectedBooking.BookingDate;
+                //cmbCourseID.Text = _bookingManager.SelectedBooking.CourseID.ToString();
+            }
+        }
+
         public void LoadCoursesBox(ComboBox comboBoxID)
         {
             comboBoxID.ItemsSource = _courseManager.RetrieveCourseID().Tables[0].DefaultView;
@@ -64,6 +73,20 @@ namespace BookingGUI
 
         }
 
-
+        private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (bookingList.SelectedCells.Count() > 0)
+            {
+                int selectedRowIndex = bookingList.SelectedIndex+1;
+                _bookingManager.SetSelectedBooking(selectedRowIndex);
+            }
+            PopulateTextField();
+            //if (datagridview1.SelectedCells.Count > 0)
+            //{
+            //    int selectedrowindex = datagridview1.SelectedCells[0].RowIndex;
+            //    DataGridViewRow selectedRow = datagridview1.Rows[selectedrowindex];
+            //    string cellValue = Convert.ToString(selectedRow.Cells["enter column name"].Value);
+            //}
+        }
     }
 }

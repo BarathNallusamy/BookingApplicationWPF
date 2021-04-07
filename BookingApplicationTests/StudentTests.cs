@@ -13,16 +13,17 @@ namespace BookingApplicationTests
         public void Setup()
         {
             _studentManager = new StudentManager();
-            
-            using(var db = new AcademyContext())
+            using (var db = new AcademyContext())
             {
-                var studentQuery =
-                    from stu in db.Students
-                    where stu.StudentID == 1
-                    select stu;
-                db.Students.RemoveRange(studentQuery);
+                var selectedStudent =
+                from s in db.Students
+                where  s.FirstName == "Baray"
+                select s;
+
+                db.Students.RemoveRange(selectedStudent);
                 db.SaveChanges();
             }
+
         }
 
         [Test]
@@ -44,11 +45,10 @@ namespace BookingApplicationTests
         {
             using (var db = new AcademyContext())
             {
-                _studentManager.Create("XYZ", "ABCD", "ABC@gmail.com");
-                db.SaveChanges();
+                _studentManager.Create("Baray", "Nallu", "Nallu.baray@gmail.com");
 
                 bool expected = true;
-                bool results = _studentManager.CheckDuplicateRecords("ABC@gmail.com");
+                bool results = _studentManager.CheckDuplicateRecords("Nallu.baray@gmail.com");
 
                 Assert.AreEqual(expected,results);
 
@@ -60,14 +60,14 @@ namespace BookingApplicationTests
         public void TearDown()
         {
             _studentManager = new StudentManager();
-
             using (var db = new AcademyContext())
             {
-                var studentQuery =
-                    from stu in db.Students
-                    where stu.StudentID == 1
-                    select stu;
-                db.Students.RemoveRange(studentQuery);
+                var selectedStudent =
+                from s in db.Students
+                where s.FirstName == "Baray"
+                select s;
+
+                db.Students.RemoveRange(selectedStudent);
                 db.SaveChanges();
             }
         }

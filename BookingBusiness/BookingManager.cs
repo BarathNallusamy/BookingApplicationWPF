@@ -68,5 +68,14 @@ namespace BookingBusiness
             }
         }
 
+        public void SetSelectedBooking(int selectedItem)
+        {
+            using (var db = new AcademyContext())
+            {
+                SelectedBooking = db.Bookings.Where(b => b.BookingID == selectedItem).FirstOrDefault();
+                db.SaveChanges();
+            }
+        }
+
     }
 }
