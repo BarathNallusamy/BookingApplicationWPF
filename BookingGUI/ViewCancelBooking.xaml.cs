@@ -23,6 +23,7 @@ namespace BookingGUI
     public partial class ViewCancelBooking : Window
     {
         CourseManager _courseManager = new CourseManager();
+        BookingManager _bookingManager = new BookingManager();
 
         public ViewCancelBooking()
         {
@@ -34,17 +35,7 @@ namespace BookingGUI
 
         public void PopulateBookingListBox()
         {
-            string cmdString = string.Empty;
-            using (SqlConnection connect = ConnectionHelper.GetConnection())
-            {
-                cmdString = "select BookingID, FirstName+' '+LastName AS 'FullName', Email, CourseName , CoursePrice, BookingDate, BookingStatus  from Bookings b join Students s on b.StudentID = s.StudentID join Courses c on b.CourseID = c.CourseID";
-                SqlCommand cmd = new SqlCommand(cmdString, connect);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable("Bookings");
-                sda.Fill(dt);
-                bookingList.ItemsSource = dt.DefaultView;
-                connect.Close();
-            }
+            bookingList.ItemsSource = _bookingManager.RetreiveBookingData().DefaultView;
         }
 
         public void LoadCoursesBox(ComboBox comboBoxID)
@@ -67,11 +58,6 @@ namespace BookingGUI
 
         private void btnClose_Click(object sender, RoutedEventArgs e) => this.Close();
 
-
-        private void bookingList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
