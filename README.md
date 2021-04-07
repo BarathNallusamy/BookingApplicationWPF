@@ -1,6 +1,7 @@
 # ABC Booking application system 
 >> **Booking application system created with WPF SQL and C# using Entity framework core.**
 
+## **Project Goal**
 The ABC academy needs software for managing the bookings of courses made by the students. The academy offers different courses throughout the year.
 
 **The End user for this application will be the academy front desk executive**
@@ -16,7 +17,7 @@ _User will perform the booking related functions based on details provided by th
     - a report containing the group exercise which has generated the highest income, counting all the same exercise classes together.
 
 
-**Project definition of 'Done'**
+## **Project definition of 'Done'**
 
 - [x] Acceptance criteria met
 - [x] Tests are written for all business project classes and  are passing
@@ -53,9 +54,12 @@ _What went well_
 - Creating WPF windows to make the user interact with the data.
 
 _Improvement_
-- Write raw Sql codes inside the business layer and make the front end to access them via public methods.
-- Write more validations so that the user cannot input numbers or characters in the text fields.
+- Use Kanban board more effectively.
 - Make the GUI design more user friendly.
+
+_Actions_
+- Focus on the main functions and then move to application enhancement.
+- Write more unit tests.
 
 
 ![Start of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20one%20point%201.jpg)
@@ -86,14 +90,14 @@ BookingID	|Full Name	|Course Name|Booking Date		|Booking Status
 **Sprint retrospective:**
 
 _What went well_
-- Creating new window and laying out the button and list boxes.
-- Loading the database values inside the combo boxes
-- Inserting a calender item and getting the selected value from it.
-- Creating new booking and propulating the table.
+- tracking the project kanban board to perform actions accordingly.
 
 _Improvement_
-- Write raw Sql codes inside the business layer and make the front end to access them via public methods.
-- Combo box to show student name and course name along with their ID's respectively for user ease of use.
+- Get the core function to work perfectly and then move to the next solution.
+- Write test units more effectively
+
+_Actions_
+- Move core functions inside the business layer.
 
 
 
@@ -109,7 +113,24 @@ _Sprint_ **3**
 
 *List of tasks completed in this sprint backlog are:*
 - Move the raw SQL methods inside the business layer
-- Use public methods in WPF layer to access the data values.
+- Use public methods in WPF layer to access the data values(one sample shown below).
+
+```Csharp
+public List<Course> RetreiveCourseDate()
+        {
+            using (var db = new AcademyContext())
+            {
+                var courseQuery =
+                    from c in db.Courses
+                    orderby c.CourseID
+                    select c;
+
+                var query = db.Courses.FromSqlRaw(courseQuery.ToQueryString()).ToList();
+                return query;
+            } 
+        }
+```
+
 
 **Sprint retrospective:**
 
@@ -129,20 +150,7 @@ In this project I have learned how to modularise the codes to write simple appli
 This application is still in a basic level and it has a large future scope such as creating user login and enabling various permissions for administrators. Also we can include an option for  students to write review after completing their courses successfully.
 
 ***User Guide***
-To start the application please run the BookingGUI project as the startup project. 
->>There are no login page therefore the user can start using the buttons provided in the main window
+>>To start the application please run the BookingGUI project as the startup project. 
 
-
-
-This is the `Main` method
-```Csharp
-public static void Main(){
-	
-}
-```
-
-##Task lists
-- [ ] this is a list item
-- [x] this item is marked
 
 
