@@ -115,6 +115,7 @@ _Sprint_ **3**
 - Move the raw SQL methods inside the business layer
 - Use public methods in WPF layer to access the data values(one sample shown below).
 
+This is a ```public``` method written inside the course manager class.
 ```Csharp
 public List<Course> RetreiveCourseDate()
         {
@@ -145,12 +146,22 @@ _Improvement_
 ![End of sprint #1](https://github.com/BarathNallusamy/BookingApplicationWPF/blob/75dae287f21a3d713411a48be07b320560814f62/Images/sprint%20three%20point%202.jpg)
 
 ## Overall project retrospective 
-In this project I have learned how to modularise the codes to write simple applications. I was able to seperate projects for backend database and front end WPF then use Entity framework to work in the middle as a communicator. This enabled me to use the OOP encapsulation to write public functions in C# classes and use them in the front end application, thus making the software more secure and robust. 
+In this project I have learned how to modularise the codes to write simple applications. I was able to seperate projects for backend database and front end WPF then use Entity framework to work in the middle as a communicator. This enabled me to use the OOP encapsulation to write public functions in C# classes and use them in the front end application, thus making the software more secure and robust.
+With the help of @cathy-french I was able to write enhanced documentation inside the Git-Hub project using markdown syntax.
 
-This application is still in a basic level and it has a large future scope such as creating user login and enabling various permissions for administrators. Also we can include an option for  students to write review after completing their courses successfully.
+**_Furture scope of the project_** 
+This application is still in a basic level, we can introduce more functions such as;
+- Creating user login and enabling various permissions to perform administrative tasks.
+- Print monthly income report for accounting purposes
+- Send confirmation emails directly from the system to students.
+- Enable students to write review after completing their courses successfully.
 
 ***User Guide***
 >>To start the application please run the BookingGUI project as the startup project. 
+
+
+![This is the Main window]()
+![This is the booking window]()
 
 
 
